@@ -1,240 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeatherActivity">
+    android:orientation="vertical"
+    tools:context=".WeatherAndForecastFragment">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#96FFA4">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerInParent="true"
-            android:contentDescription="@string/description"
-            android:src="@drawable/sunny" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="318dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sunny" />
-
-        </LinearLayout>
+        android:background="@color/red"
+        android:orientation="vertical"
+        tools:context=".WeatherFragment">
 
         <TextView
-            android:id="@+id/location"
+            android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="@string/location" />
+            android:layout_marginLeft="10dp"
+            android:text="@string/Fire_40C"
+            android:textAlignment="gravity"
+            android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="320dp"
+            android:text="@string/paris"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="36dp"
+            android:src="@drawable/rain" />
     </RelativeLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#008080"
-        tools:context=".WeatherAndForecastFragment$ForecastFragment">
-
-        <!-- TODO: Update blank fragment layout -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="10px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
-            android:background="#FFFFFF">
-
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_margin="30px"
-                android:layout_marginEnd="100px"
-                android:text="@string/thursday"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:layout_width="130px"
-                android:layout_height="130px"
-                android:contentDescription="@string/description"
-                android:src="@drawable/rain" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="20px">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="@string/sunny" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:text="@string/temp1" />
-            </LinearLayout>
-
-
-        </LinearLayout>
+        tools:context=".ForecastFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="10px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
-            android:background="#FFFFFF">
+            android:layout_marginBottom="20dp"
+            android:background="@color/blue_sky"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_margin="30px"
-                android:layout_marginEnd="100px"
-                android:text="@string/thursday"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:layout_width="130px"
-                android:layout_height="130px"
-                android:contentDescription="@string/description"
-                android:src="@drawable/sunny" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="20px">
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="@string/sunny" />
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/monday"
+                    android:textSize="18sp" />
 
-                <TextView
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:text="@string/temp1" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/partly_cloudy"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_24_31"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="10px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
-            android:background="#FFFFFF">
-
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_margin="30px"
-                android:layout_marginEnd="100px"
-                android:text="@string/thursday"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:layout_width="130px"
-                android:layout_height="130px"
-                android:contentDescription="@string/description"
-                android:src="@drawable/heavyrain" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="20px">
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="@string/sunny" />
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/tuesday"
+                    android:textSize="18sp" />
 
-                <TextView
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:text="@string/temp1" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showers"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_24_30"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="10px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
-            android:background="#FFFFFF">
-
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_margin="30px"
-                android:layout_marginEnd="100px"
-                android:text="@string/thursday"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:layout_width="130px"
-                android:layout_height="130px"
-                android:contentDescription="@string/description"
-                android:src="@drawable/cloudy" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="20px">
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="@string/sunny" />
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/wednesday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rain"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_22_23"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/thursday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:text="@string/temp1" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_showers"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_22_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/friday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mostly_cloudy"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_22_30"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/saturday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/partly_cloudy"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_24_31"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/sunday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_25_28"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/monday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_24_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/tuesday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showers"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_24_26"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/wednesday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_23_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/thursday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_23_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/friday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_23_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/saturday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/sunny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_23_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>

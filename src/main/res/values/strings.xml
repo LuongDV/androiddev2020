@@ -15,5 +15,13 @@
     <string name="sunny">sunny</string>
     <string name="temp1">30C</string>
     <string name="location">Paris</string>
-
+    <string name="C_24_31" translatable="false">24C-31C</string>
+    <string name="C_24_30" translatable="false">24C-30C</string>
+    <string name="C_22_23" translatable="false">22C-23C</string>
+    <string name="C_22_27" translatable="false">22C-27C</string>
+    <string name="C_22_30" translatable="false">22C-30C</string>
+    <string name="C_25_28" translatable="false">25C-28C</string>
+    <string name="C_24_27" translatable="false">24C-27C</string>
+    <string name="C_24_26" translatable="false">24C-26C</string>
+    <string name="C_23_27" translatable="false">23C-27C</string>
 </resources>
